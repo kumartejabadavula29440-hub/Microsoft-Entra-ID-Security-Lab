@@ -9,6 +9,49 @@ The lab is designed to simulate a small organization's identity environment and 
 ## High-Level Architecture
 
 ```text
+
+                         Microsoft Entra ID
+                              │
+             ┌────────────────┼────────────────┐
+             │                │                │
+           Users            Groups          Devices
+             │                │
+             │                ├── Assigned Groups
+             │                │
+             │                └── Dynamic Groups
+             │                         │
+             │                  LAB-SECURITY-DYNAMIC
+             │
+             └───────────────┐
+                             │
+                    Administrative Unit
+                             │
+                      LAB-Security-AU
+                             │
+                     Scoped RBAC / PIM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                          Internet
                             |
                             v
